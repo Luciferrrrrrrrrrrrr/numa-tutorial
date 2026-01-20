@@ -1,4 +1,5 @@
-import { Text, View, StyleSheet } from "react-native"
+import { Gradient} from "@/components/gradient";
+import { Text, View, StyleSheet } from "react-native";
 
 interface FormProps {
   title: string
@@ -9,6 +10,8 @@ interface FormProps {
 
 export function Form({ title, subtitle, children, headerChildren }: FormProps) {
   return (
+    <>
+    <Gradient />
     <View style={styles.container}>
       <View style={styles.contentWrapper}>
         <View style={styles.headerContainer}>
@@ -21,7 +24,8 @@ export function Form({ title, subtitle, children, headerChildren }: FormProps) {
         </View>
       </View>
     </View>
-  )
+    </>
+  );
 }
 
 export default Form
